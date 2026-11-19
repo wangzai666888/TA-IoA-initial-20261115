@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "protocol_id": "co_ioa_13_formal_v1",
+  "status": "formal_frozen",
+  "scenario_overrides_allowed": [
+    "seed",
+    "planner"
+  ],
+  "scenarios": {
+    "accepted_then_disconnected": {
+      "file_sha256": "7266ac60e573b95b11a366b9e92c19c889128cb0875392d8c03b036c54f9576d",
+      "environment_sha256": "9e7f66cdcddf0abeaee193bf2e39f1f78548cdbccfdb2d9bd7cdc0e287dbfad1"
+    },
+    "authorized_revision": {
+      "file_sha256": "82268a97130082d5972b0f977941804a7d3bd4488a8523d37f1f90de86a1a2ac",
+      "environment_sha256": "6b5086334472662af1d700351ca7ff5dbea348d6b5ad4869d4a49d4171d1da92"
+    },
+    "baseline": {
+      "file_sha256": "ed6d19965108be27452d15aabbe4513f588a8d489a1d84312a27f9a0f2bfa900",
+      "environment_sha256": "7fd2a2904fe4d4beb7943a07ffbe9aaf73b661f9a806f0f6b87ece3d59e2c9e7"
+    },
+    "cancel_pending_cleanup": {
+      "file_sha256": "1f02a1ecf44b4ed3bfb1e7bdd453088182d3f0a2356d7af9debb4ff6bb5a6d3b",
+      "environment_sha256": "88f63ac31ddaccc1796ab675988577ae283e189363e93b0fe0fa2b2c401947ed"
+    },
+    "delayed_contact": {
+      "file_sha256": "456ae9650c5e827fe81d98fcbf6bf56976665789440ca5d6dd37b55266a9e73c",
+      "environment_sha256": "b043cdacb717b692070405105b67d4405e6d8629dd939c56d3cea2dee5f122d0"
+    },
+    "dependency": {
+      "file_sha256": "c309b1f47c4410b98fa8d40ce697c9509bd528fe81f068d0a12e3b608cef2a82",
+      "environment_sha256": "6af47c1ee41a5bdc3429897a1b0b127cef33ec9b7f99fad4d9ce6856033ca22a"
+    },
+    "feasible_shift": {
+      "file_sha256": "5faf13f2723264ee9fbe481da49425c56fc4f70450c28a25edb7994576b37b70",
+      "environment_sha256": "89256222bb2ed681e8bbdceeca7e6cb46a81046687a17310db021249b198bc48"
+    },
+    "hard_deadline_failure": {
+      "file_sha256": "2974f404d536e4b246ff6aaa8c2369560f7208627d9ba2d70c5d04020dba902d",
+      "environment_sha256": "0e9dc4a3a2e30ecf73146283c72fe1642d1b2f63671f165f39ccfbcaafb46a19"
+    },
+    "local_alternative": {
+      "file_sha256": "20a65a40ac06f295172fd72e3976604f1c16218ef4fa74d521634c0f2e91943b",
+      "environment_sha256": "899f85151a7e86002bb977399b85ba685a8c852931881db1f857caa0f5609163"
+    },
+    "lost_ack_result": {
+      "file_sha256": "b3a8a6d9b336ef97725b3e16337344d94d30c31f5b77ab1703f2b10e3eb86471",
+      "environment_sha256": "9d438a32c1a12b13a16205ab3eb52aee06ecd8f2ae3b0a481c73658c797e8c80"
+    },
+    "objective_revision_parallel": {
+      "file_sha256": "8b6c569d44b52c1f5217fa90f7324d2a0cba4381ee06ce64a823b66c67ac25fd",
+      "environment_sha256": "cce45d9b31aa83a6a928d26c77d73565165572f1ca8fb5a69cab7f9624ab7710"
+    },
+    "remote_server_parallel": {
+      "file_sha256": "afedeadfdd015b09ce50bcc437ace685a8776680621efd5bd8be9a47e076bfe3",
+      "environment_sha256": "ab1cab1f8a577f5e76422f2dfe8005a637ed5d48884d9ef605b013b7980e6159"
+    },
+    "unobserved_window_change": {
+      "file_sha256": "a1df39f28fef88f3dde45e944775d0497a4909a53edb21fbb47ca7509ce49a33",
+      "environment_sha256": "7aa7c87a4034602c6fb7bb140d86abe55435b5b98366e91645865901a0d713b6"
+    }
+  },
+  "upstream": {
+    "root": "/root/IoA_upstream",
+    "official_commit": "9d78e88e47160eb42ee1ee8538c05e1c2c47877a",
+    "local_baseline_commit": "b4620b1fd6ffc378be2528a77e02d8da39d70207",
+    "source_sha256": {
+      "im_client/communication/communication_layer.py": "2770f74c0768301e6c2889658a2c5275444651788816313ba811512632d2762d",
+      "im_client/communication/task_management.py": "63a84f7c785432745a2fa4be19da147e989799c857dbb28fab65a669c8780df2",
+      "im_client/prompts/communication.py": "c0048fa612b6bbb8fab73c3a73060750a14385fbbe6f1ce6b5742cfc13cc4f4f",
+      "im_client/llms/openai.py": "ae4c67c9a31cd426fb3f1db811b7769c1354d0a3600055877916a52061b3d1a2",
+      "im_server/app.py": "0b368c4caefa9ef954b8aadecdebc65131fb9f6b62c5154c8f29c8236f813cd4",
+      "common/utils/milvus_utils.py": "af0487985b509771b884830ecdeba3a48fe8041e139b04968a3d0c8bc1e05431",
+      "configs/client_configs/default_config.yaml": "df5355cd9a14484a244caf16ce282870c357ec36029554cc5ca64ccc454d8af9"
+    },
+    "adapter_status": "stages_4_through_9_completed; native policy baseline retained"
+  },
+  "co_model_configuration": {
+    "model": "Qwen3.8-Flash",
+    "provider_base": "https://llmapi.paratera.com/v1",
+    "temperature": 0.0,
+    "read_timeout_seconds": 240.0,
+    "max_read_timeout_seconds": 480.0,
+    "transport_retries": 2,
+    "retry_backoff_seconds": 1.0,
+    "max_plan_corrections": 2,
+    "output_token_limit": "provider_default",
+    "total_run_call_limit": null
+  },
+  "environment_rules": {
+    "time_unit": "integer_simulation_seconds",
+    "model_wall_time_advances_simulation": false,
+    "window_intervals": "[start,end); positive transmission must finish no later than end",
+    "tick_priority": [
+      "external_events_in_file_order",
+      "message_arrivals",
+      "local_completions",
+      "local_coordination_and_start",
+      "outbox_transmission",
+      "repeat_until_quiescent",
+      "timeouts"
+    ],
+    "local_echo": "no physical link",
+    "business_communication": "all cross-node business, including Server discovery and requests, must obey directed physical windows",
+    "task_execution": "nonpreemptive unless permitted cancellation delivered; task duration, resource constraints and failure injection unchanged",
+    "initial_registry": "scenario-declared server-local snapshot, not a live remote-state read",
+    "forecasts": "separate from truth; perfect_prediction means authorized initial snapshot, not knowledge of unobserved future changes",
+    "result_delivery": "physical completion does not imply coordinator receipt",
+    "evaluation": "independent cross-method judge required; current CO controller verdict is diagnostic only"
+  },
+  "methods": {
+    "co_ioa": {
+      "forecast": "known initial windows and delivered updates",
+      "controller": "CO"
+    },
+    "ioa_original": {
+      "forecast": "same authorized information available; no injected CO solver decisions",
+      "controller": "upstream native",
+      "status": "adapter_ready"
+    },
+    "co_ioa_no_forecast": {
+      "forecast": "none; constant-latency immediate-dispatch assumption only",
+      "disabled": [
+        "initial forecast lookup",
+        "forecast-aware coordinator nomination",
+        "local/server forecast-constrained matching",
+        "forecast updates and revalidation"
+      ],
+      "retained": [
+        "physical windows",
+        "resource and capability constraints",
+        "task durations/deadlines",
+        "ACK/reject/result feedback",
+        "objective changes",
+        "CO controller",
+        "LLM requirement planning"
+      ],
+      "policy_version": "v2",
+      "candidate_tie_break": "For equally optimal assignments rotate sorted capable agent IDs by paired seed modulo candidate count; objective keeps retention and earliest finish ahead of tie rank; no window data used.",
+      "unsent_dispatch_expiry": "At local expiry, release only the still-unsent assignment and re-match from current simulation time; authorized requirement revision remains subject to existing scenario permissions.",
+      "formal_comparison_note": "Run multiple paired seeds and report actual executor distribution. A single seed must not be chosen for favorable outcome."
+    }
+  },
+  "reporting": {
+    "outcomes": [
+      "success",
+      "task_failure",
+      "cancelled",
+      "unknown_at_horizon",
+      "technical_error"
+    ],
+    "completion_time": "all required results received after authorized execution; not arbitrary ended_at",
+    "technical_errors": "report separately; do not convert to a fast task failure",
+    "rule_runs": "mechanism regression only, never real LLM comparative evidence",
+    "repetitions_recommendation": 10,
+    "pairing": "same scenario and external-event seed; interleave method order"
+  },
+  "remaining_gates": [],
+  "budget_note": "Formal budget is enforced for CO ModelAPI and native FormalOpenAIChat only when this protocol is explicitly supplied. Native original task policy is unchanged. Native max_turns=20 remains method-specific and must be reported.",
+  "common_model_budget_target": {
+    "model": "Qwen3.8-Flash",
+    "temperature": 0,
+    "read_timeout_seconds": 240,
+    "max_read_timeout_seconds": 480,
+    "transport_retries": 2,
+    "retry_backoff_seconds": 1,
+    "max_output_tokens_per_request": 8192,
+    "max_model_requests_per_run_including_retries": 200,
+    "max_model_wall_seconds_per_run": 3600,
+    "status": "implemented_for_formal_protocol",
+    "note": "Attempts are counted across all native Agents in model_budget.json and in CO model_calls. Wall limit is elapsed real time since first request, checked before each attempt."
+  },
+  "formal_budget": {
+    "read_timeout_seconds": 240.0,
+    "max_read_timeout_seconds": 480.0,
+    "transport_retries": 2,
+    "retry_backoff_seconds": 1.0,
+    "max_output_tokens_per_request": 8192,
+    "max_model_requests_per_run_including_retries": 200,
+    "max_model_wall_seconds_per_run": 3600.0
+  },
+  "formal_design": {
+    "primary_scenarios": [
+      "baseline",
+      "delayed_contact",
+      "authorized_revision",
+      "objective_revision_parallel",
+      "remote_server_parallel",
+      "lost_ack_result",
+      "unobserved_window_change",
+      "hard_deadline_failure"
+    ],
+    "primary_repetitions": 10,
+    "secondary_repetitions": 3,
+    "seed_start": 0,
+    "selection_note": "Mechanism coverage selected after exploratory outcomes were seen; all 13 scenarios retained in formal data and supplement.",
+    "native_max_turns": 20,
+    "native_wall_wait_seconds": 1200.0
+  },
+  "analysis_plan": {
+    "judge": "external-v1",
+    "primary_effect": "external_judgement.collaboration_success_rate and on_time_execution_completion_rate, reported per scenario and method",
+    "time_metric": "external_judgement.all_required_results_received_at for successful runs only; no imputation for failures",
+    "run_statuses": [
+      "success",
+      "failed",
+      "cancelled",
+      "incomplete",
+      "model_invalid",
+      "budget_exhausted",
+      "technical_error",
+      "not_run"
+    ],
+    "unknown_remote_work": "Keep judge failed outcome; annotate pending_remote_work or unreported physically completed task. Never relabel it success or insert a completion time.",
+    "technical_error_policy": "Keep every planned run and error artifact; no automatic replacement. API/adapter failures are technical_error and excluded only from conditional behavioral rates; report all-planned success as sensitivity. Any later rerun gets a new attempt ID and both attempts remain.",
+    "denominator": "Show planned N and behavioral valid n separately. Model-invalid and budget-exhausted runs are non-success behavioral outcomes; technical errors and not-run are excluded only from conditional behavioral rates. Physical-completion mean uses only non-null judge values, with its own n.",
+    "timing_comparison": "Time estimates conditional on success; paired deltas only when both methods succeed at the same scenario and repetition.",
+    "cancel_and_infeasible": "Cancellation and known infeasibility are distinct behaviors, not ordinary mission-success failures.",
+    "display": "Main 8-scene matrix plus time points; supplementary 13-scene table/matrix; failures never plotted at zero or horizon as completion time.",
+    "negative_controls": "hard_deadline_failure is judged by correct infeasibility recognition as well as raw mission outcome; cancel_pending_cleanup is judged by cancellation and cleanup, not mission success.",
+    "success_summary": "Per scenario and method report k/n among behavioral valid runs and exact planned N. If displaying an interval, use 95% Wilson score for k/n; label n. Also show all-planned k/N sensitivity with technical errors retained.",
+    "completion_summary": "Show each non-null judge completion ratio or its median and interquartile range, with the number of non-null observations; never turn missing judgement into zero.",
+    "time_summary": "For successful runs show each received-at time and median with interquartile range; no time is assigned to failure, cancellation, unknown work, budget exhaustion or technical error.",
+    "cross_method": "Report paired time differences only for matched scenario/repetition blocks where both methods succeeded; otherwise compare category counts, not conditional times alone. Descriptive only for n<=10."
+  },
+  "formal_sources": {
+    "co_tree_sha256": "46d5debb1ff13fb5f822f336ffd38e81c5e4ec0bc80bd703af3ecd7973d85720",
+    "upstream_client_sha256": "c35f1cae632d4bfd547a6b5b888bc9e88901773bf701d823accaea4d08780c89",
+    "docker_image_id": "sha256:42415f0473e64f0efde714763a5763095eb5c187d37cff97df60a98d94f2f5da"
+  },
+  "native_model_configuration": {
+    "model": "Qwen3.8-Flash",
+    "temperature": 0.0,
+    "embedding_model": "GLM-Embedding-3",
+    "embedding_dimension": 2048
+  }
+}

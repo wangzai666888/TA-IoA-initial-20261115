@@ -1,0 +1,6 @@
+{
+  "scenario": "delayed_contact",
+  "backend": "ioa",
+  "planner": "llm",
+  "seed": 0
+}

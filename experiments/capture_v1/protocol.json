@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "protocol_id": "capture_shared_v1",
+  "status": "boundary_frozen",
+  "scope": "steps_1_to_4; common physics and local skill boundary only",
+  "source_project": "ICLR_IoA_202610",
+  "source_sha256": {
+    "simulator/core.py": "cdc470750ea5de8fe9f6fa32cc06311c09b4cc5e3d5fb0f9087bcc0ee0c40346",
+    "simulator/experiment_rules.py": "d72be0de6826870222614991b2e76dee9399602fd0c61867a507251fed69703f",
+    "simulator/scenario.py": "dd2181de4ffd755a489b67e2a20bbae6c353f73480236790f7411e86848527f5",
+    "simulator/scenarios/fixed_10/manifest.json": "aae6e5d023a5005974780e04ddb9819fd29c286e45cf4892e2fe4d791a56df66"
+  },
+  "scenes": {
+    "scene_01.json": {
+      "scenario_id": "random_fixed_01",
+      "sha256": "c1f2828beac3c6c72fb053f081c39e57c6944773d6bbd4a595bce6b340d8b30b",
+      "generation_seed": 20261031
+    },
+    "scene_02.json": {
+      "scenario_id": "random_fixed_02",
+      "sha256": "9317522a618d84704ff9cb5a6469c10e23a01ec9c7d91392fecdeb6cb1b313b2",
+      "generation_seed": 20261032
+    },
+    "scene_03.json": {
+      "scenario_id": "random_fixed_03",
+      "sha256": "7b412bd502c4ba4402e3978edb6c4c4af1965af41ad41b8fb46e5806bc2a6d11",
+      "generation_seed": 20261033
+    },
+    "scene_04.json": {
+      "scenario_id": "random_fixed_04",
+      "sha256": "29d0873f6200bc8501122b4b258a7717190cbbff6b07381803a927f885bb6510",
+      "generation_seed": 20261034
+    },
+    "scene_05.json": {
+      "scenario_id": "random_fixed_05",
+      "sha256": "520c3a06fc51624c3d9e37b7cf1421f991d913f77012b870f5d4c67cfe0fb419",
+      "generation_seed": 20261035
+    },
+    "scene_06.json": {
+      "scenario_id": "random_fixed_06",
+      "sha256": "003a55c765afb8648277eaf606073ef0c0d3510bb54593f13d67c34a61ab9b67",
+      "generation_seed": 20261036
+    },
+    "scene_07.json": {
+      "scenario_id": "random_fixed_07",
+      "sha256": "1b05c65fe08e9b672fdbaf26320f7d5c5fde877c48f1e8ebfeb28543f9707674",
+      "generation_seed": 20261037
+    },
+    "scene_08.json": {
+      "scenario_id": "random_fixed_08",
+      "sha256": "c354c3bfd451a0d8f6586454f24c51367f5cf4ccf6a1bc1b36663c12266f8267",
+      "generation_seed": 20261038
+    },
+    "scene_09.json": {
+      "scenario_id": "random_fixed_09",
+      "sha256": "9c081884c6ce15109e8bc788e4a39188691de1e20229e20d6fcc7f2ba80898d1",
+      "generation_seed": 20261039
+    },
+    "scene_10.json": {
+      "scenario_id": "random_fixed_10",
+      "sha256": "8842db143ac6b2d2d843ba636f6c0e520356b70ed28997eedb9c800010d84d25",
+      "generation_seed": 20261040
+    }
+  },
+  "source_manifest_sha256": "aae6e5d023a5005974780e04ddb9819fd29c286e45cf4892e2fe4d791a56df66",
+  "effective_rules": {
+    "version": "authorized_capture_v1",
+    "observation_period": 3,
+    "position_report_period": 1,
+    "information_max_age": 5,
+    "authorization_ttl": 5,
+    "authorization_distance": 5.0,
+    "marker_radius": 5.0,
+    "hold_seconds": 3,
+    "hold_clock": "consecutive_completed_tick_endpoints",
+    "support_required": false,
+    "authorization_required": true,
+    "decision_policy": "latest_positive_sample_and_reported_distance_no_prediction",
+    "renewal_policy": "only_after_previous_grant_expires"
+  },
+  "saved_scene_observation_period": 5,
+  "effective_observation_period": 3,
+  "team": {
+    "candidate_count": 9,
+    "role_quotas": {
+      "observer": 2,
+      "leader": 1,
+      "marker": 2
+    },
+    "primary_mode": "method_selects_from_nine",
+    "pilot_mode": "same_preselected_five_for_interface_check",
+    "initial_scene_validity": "at_least_one_candidate_observer_detects_target_at_t0"
+  },
+  "communication": {
+    "continuous": {
+      "restricted_ids": []
+    },
+    "restricted_pair": {
+      "open_seconds": 5,
+      "closed_seconds": 5,
+      "phase_seconds": 0,
+      "period_seconds": 10,
+      "restricted_count": 2,
+      "selection": "candidate_ids_frozen_before_method_decisions"
+    }
+  },
+  "clock": {
+    "time_unit": "integer_simulation_seconds",
+    "dt": 1,
+    "model_wall_time_advances_simulation": false,
+    "same_tick_order": "to_be_frozen_with_scheduler_adapter"
+  },
+  "success": {
+    "physical": "same_marker_within_5m_for_3_consecutive_tick_endpoints_then_valid_delivered_authorization_and_tag_request",
+    "mission_result": "physical capture plus actual result delivery to authorized collector; delivery endpoint to be frozen with routing adapter",
+    "failed": "target escapes or horizon reached without physical capture",
+    "technical_error": "separate_from_physical_failure"
+  },
+  "method_labels": {
+    "co_ioa": "TA-IoA",
+    "ioa_original": "Original IoA",
+    "co_ioa_no_forecast": "TA-IoA without communication-opportunity prediction"
+  },
+  "method_boundary": {
+    "common": "scenario and private target truth, local sensor samples, motion, authorization validation, physical tag adjudication",
+    "strategy": "team selection, message generation, waypoint planning, authorization issuance, choice of tag attempt",
+    "no_forecast": "same local skills and feedback; future communication forecast excluded from method decisions",
+    "original": "native IoA policy; no TA-IoA matcher or planner injected"
+  },
+  "model_configuration_reference": {
+    "model": "Qwen3.8-Flash",
+    "provider_base": "https://llmapi.paratera.com/v1",
+    "temperature": 0.0,
+    "read_timeout_seconds": 240.0,
+    "max_read_timeout_seconds": 480.0,
+    "transport_retries": 2,
+    "retry_backoff_seconds": 1.0,
+    "max_plan_corrections": 2,
+    "output_token_limit": "provider_default",
+    "total_run_call_limit": null
+  },
+  "formal_budget_reference": {
+    "read_timeout_seconds": 240.0,
+    "max_read_timeout_seconds": 480.0,
+    "transport_retries": 2,
+    "retry_backoff_seconds": 1.0,
+    "max_output_tokens_per_request": 8192,
+    "max_model_requests_per_run_including_retries": 200,
+    "max_model_wall_seconds_per_run": 3600.0
+  },
+  "shared_source_sha256": {
+    "common_capture/__init__.py": "759fb8df546fabe0e5a1157a4f85b89b56dfcd3bce93658eff629f27e9adc5a6",
+    "common_capture/physics.py": "a9cc419b466a39a494e161d96933345dc9ab3af359e1b1e8e5dca609ea5cd334",
+    "common_capture/rules.py": "d72be0de6826870222614991b2e76dee9399602fd0c61867a507251fed69703f",
+    "common_capture/scenario.py": "0caa9e246f8e421486345ff58d99219f5e1b4fe09c065fba306b4e85ee63c559",
+    "common_capture/tools.py": "854a9a3c76cf07252cf5445632d527d1d4fa6182a5fe946e6fec851af2db6fd1",
+    "common_capture/protocol.py": "c3a71b2195aaa6f2281d38f1b31404480206d7c8c53c325ac598d7c423075949"
+  },
+  "methods_connected": false,
+  "limitations": [
+    "ten saved scenes share one target route",
+    "no three-method capture runtime in this protocol stage"
+  ]
+}

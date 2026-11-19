@@ -1,0 +1,15 @@
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+*.egg-info/
+.env
+node_modules/
+im_server/frontend/build/
+runs/
+/figures/
+/docs/
+/manuscript_drafts/
+*.pdf
+*.docx

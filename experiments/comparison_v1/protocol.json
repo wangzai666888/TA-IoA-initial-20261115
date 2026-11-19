@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "protocol_id": "co_ioa_13_stage123_v1",
+  "status": "stage123_frozen_not_formal_experiment_ready",
+  "scenario_overrides_allowed": [
+    "seed",
+    "planner"
+  ],
+  "scenarios": {
+    "accepted_then_disconnected": {
+      "file_sha256": "7266ac60e573b95b11a366b9e92c19c889128cb0875392d8c03b036c54f9576d",
+      "environment_sha256": "9e7f66cdcddf0abeaee193bf2e39f1f78548cdbccfdb2d9bd7cdc0e287dbfad1"
+    },
+    "authorized_revision": {
+      "file_sha256": "82268a97130082d5972b0f977941804a7d3bd4488a8523d37f1f90de86a1a2ac",
+      "environment_sha256": "6b5086334472662af1d700351ca7ff5dbea348d6b5ad4869d4a49d4171d1da92"
+    },
+    "baseline": {
+      "file_sha256": "ed6d19965108be27452d15aabbe4513f588a8d489a1d84312a27f9a0f2bfa900",
+      "environment_sha256": "7fd2a2904fe4d4beb7943a07ffbe9aaf73b661f9a806f0f6b87ece3d59e2c9e7"
+    },
+    "cancel_pending_cleanup": {
+      "file_sha256": "1f02a1ecf44b4ed3bfb1e7bdd453088182d3f0a2356d7af9debb4ff6bb5a6d3b",
+      "environment_sha256": "88f63ac31ddaccc1796ab675988577ae283e189363e93b0fe0fa2b2c401947ed"
+    },
+    "delayed_contact": {
+      "file_sha256": "456ae9650c5e827fe81d98fcbf6bf56976665789440ca5d6dd37b55266a9e73c",
+      "environment_sha256": "b043cdacb717b692070405105b67d4405e6d8629dd939c56d3cea2dee5f122d0"
+    },
+    "dependency": {
+      "file_sha256": "c309b1f47c4410b98fa8d40ce697c9509bd528fe81f068d0a12e3b608cef2a82",
+      "environment_sha256": "6af47c1ee41a5bdc3429897a1b0b127cef33ec9b7f99fad4d9ce6856033ca22a"
+    },
+    "feasible_shift": {
+      "file_sha256": "5faf13f2723264ee9fbe481da49425c56fc4f70450c28a25edb7994576b37b70",
+      "environment_sha256": "89256222bb2ed681e8bbdceeca7e6cb46a81046687a17310db021249b198bc48"
+    },
+    "hard_deadline_failure": {
+      "file_sha256": "2974f404d536e4b246ff6aaa8c2369560f7208627d9ba2d70c5d04020dba902d",
+      "environment_sha256": "0e9dc4a3a2e30ecf73146283c72fe1642d1b2f63671f165f39ccfbcaafb46a19"
+    },
+    "local_alternative": {
+      "file_sha256": "20a65a40ac06f295172fd72e3976604f1c16218ef4fa74d521634c0f2e91943b",
+      "environment_sha256": "899f85151a7e86002bb977399b85ba685a8c852931881db1f857caa0f5609163"
+    },
+    "lost_ack_result": {
+      "file_sha256": "b3a8a6d9b336ef97725b3e16337344d94d30c31f5b77ab1703f2b10e3eb86471",
+      "environment_sha256": "9d438a32c1a12b13a16205ab3eb52aee06ecd8f2ae3b0a481c73658c797e8c80"
+    },
+    "objective_revision_parallel": {
+      "file_sha256": "8b6c569d44b52c1f5217fa90f7324d2a0cba4381ee06ce64a823b66c67ac25fd",
+      "environment_sha256": "cce45d9b31aa83a6a928d26c77d73565165572f1ca8fb5a69cab7f9624ab7710"
+    },
+    "remote_server_parallel": {
+      "file_sha256": "afedeadfdd015b09ce50bcc437ace685a8776680621efd5bd8be9a47e076bfe3",
+      "environment_sha256": "ab1cab1f8a577f5e76422f2dfe8005a637ed5d48884d9ef605b013b7980e6159"
+    },
+    "unobserved_window_change": {
+      "file_sha256": "a1df39f28fef88f3dde45e944775d0497a4909a53edb21fbb47ca7509ce49a33",
+      "environment_sha256": "7aa7c87a4034602c6fb7bb140d86abe55435b5b98366e91645865901a0d713b6"
+    }
+  },
+  "upstream": {
+    "root": "/root/IoA_upstream",
+    "official_commit": "9d78e88e47160eb42ee1ee8538c05e1c2c47877a",
+    "local_baseline_commit": "b4620b1fd6ffc378be2528a77e02d8da39d70207",
+    "source_sha256": {
+      "im_client/communication/communication_layer.py": "2770f74c0768301e6c2889658a2c5275444651788816313ba811512632d2762d",
+      "im_client/communication/task_management.py": "63a84f7c785432745a2fa4be19da147e989799c857dbb28fab65a669c8780df2",
+      "im_client/prompts/communication.py": "c0048fa612b6bbb8fab73c3a73060750a14385fbbe6f1ce6b5742cfc13cc4f4f",
+      "im_client/llms/openai.py": "ae4c67c9a31cd426fb3f1db811b7769c1354d0a3600055877916a52061b3d1a2",
+      "im_server/app.py": "0b368c4caefa9ef954b8aadecdebc65131fb9f6b62c5154c8f29c8236f813cd4",
+      "common/utils/milvus_utils.py": "af0487985b509771b884830ecdeba3a48fe8041e139b04968a3d0c8bc1e05431",
+      "configs/client_configs/default_config.yaml": "df5355cd9a14484a244caf16ce282870c357ec36029554cc5ca64ccc454d8af9"
+    }
+  },
+  "co_model_configuration": {
+    "model": "Qwen3.8-Flash",
+    "provider_base": "https://llmapi.paratera.com/v1",
+    "temperature": 0.0,
+    "read_timeout_seconds": 240.0,
+    "max_read_timeout_seconds": 480.0,
+    "transport_retries": 2,
+    "retry_backoff_seconds": 1.0,
+    "max_plan_corrections": 2,
+    "output_token_limit": "provider_default",
+    "total_run_call_limit": null
+  },
+  "environment_rules": {
+    "time_unit": "integer_simulation_seconds",
+    "model_wall_time_advances_simulation": false,
+    "window_intervals": "[start,end); positive transmission must finish no later than end",
+    "tick_priority": [
+      "external_events_in_file_order",
+      "message_arrivals",
+      "local_completions",
+      "local_coordination_and_start",
+      "outbox_transmission",
+      "repeat_until_quiescent",
+      "timeouts"
+    ],
+    "local_echo": "no physical link",
+    "business_communication": "all cross-node business, including Server discovery and requests, must obey directed physical windows",
+    "task_execution": "nonpreemptive unless permitted cancellation delivered; task duration, resource constraints and failure injection unchanged",
+    "initial_registry": "scenario-declared server-local snapshot, not a live remote-state read",
+    "forecasts": "separate from truth; perfect_prediction means authorized initial snapshot, not knowledge of unobserved future changes",
+    "result_delivery": "physical completion does not imply coordinator receipt",
+    "evaluation": "independent cross-method judge required; current CO controller verdict is diagnostic only"
+  },
+  "methods": {
+    "co_ioa": {
+      "forecast": "known initial windows and delivered updates",
+      "controller": "CO"
+    },
+    "ioa_original": {
+      "forecast": "same authorized information available; no injected CO solver decisions",
+      "controller": "upstream native",
+      "status": "adapter_pending"
+    },
+    "co_ioa_no_forecast": {
+      "forecast": "none; constant-latency immediate-dispatch assumption only",
+      "disabled": [
+        "initial forecast lookup",
+        "forecast-aware coordinator nomination",
+        "local/server forecast-constrained matching",
+        "forecast updates and revalidation"
+      ],
+      "retained": [
+        "physical windows",
+        "resource and capability constraints",
+        "task durations/deadlines",
+        "ACK/reject/result feedback",
+        "objective changes",
+        "CO controller",
+        "LLM requirement planning"
+      ]
+    }
+  },
+  "reporting": {
+    "outcomes": [
+      "success",
+      "task_failure",
+      "cancelled",
+      "unknown_at_horizon",
+      "technical_error"
+    ],
+    "completion_time": "all required results received after authorized execution; not arbitrary ended_at",
+    "technical_errors": "report separately; do not convert to a fast task failure",
+    "rule_runs": "mechanism regression only, never real LLM comparative evidence",
+    "repetitions_recommendation": 10,
+    "pairing": "same scenario and external-event seed; interleave method order"
+  },
+  "remaining_gates": [
+    "steps4-7_native_tools_clock_transport_events",
+    "step8_common_independent_evaluator",
+    "uniform_API_retry_timeout_token_and_run_budgets_before_formal_trials",
+    "freeze_post_adapter_source_and_prompts_before_formal_trials"
+  ],
+  "budget_note": "Current CO settings are frozen and checked with --protocol in LLM mode. Original wrapper still uses its native 20-attempt retry decorators; no fair-budget claim. Output tokens and total calls are currently unbounded by harness. Enforce one explicit shared budget profile before formal comparison.",
+  "common_model_budget_target": {
+    "model": "Qwen3.8-Flash",
+    "temperature": 0,
+    "read_timeout_seconds": 240,
+    "max_read_timeout_seconds": 480,
+    "transport_retries": 2,
+    "retry_backoff_seconds": 1,
+    "max_output_tokens_per_request": 8192,
+    "max_model_requests_per_run_including_retries": 200,
+    "max_model_wall_seconds_per_run": 3600,
+    "status": "frozen_target_not_yet_enforced_by_shared_adapter",
+    "note": "Original and CO wrappers must both implement this profile before formal trials; no silent fallback or budget parity claim now."
+  }
+}

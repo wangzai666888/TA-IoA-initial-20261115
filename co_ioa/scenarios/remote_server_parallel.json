@@ -1,0 +1,245 @@
+{
+  "name": "remote_server_parallel",
+  "seed": 0,
+  "max_time": 1150,
+  "perfect_prediction": true,
+  "latency": 0,
+  "objective": "Inspect the underwater site and return the sonar result",
+  "server_id": "USV-1",
+  "capability_templates": {
+    "coordinate": {
+      "duration": 1,
+      "aliases": [
+        "coordination"
+      ]
+    },
+    "sonar": {
+      "duration": 360,
+      "aliases": [
+        "水下声呐检查"
+      ]
+    },
+    "survey": {
+      "duration": 400,
+      "aliases": [
+        "surface survey"
+      ]
+    },
+    "analysis": {
+      "duration": 30,
+      "aliases": [
+        "analyse sonar"
+      ]
+    }
+  },
+  "agents": [
+    {
+      "id": "USV-1",
+      "platform": "USV",
+      "roles": [
+        "SERVER",
+        "COORDINATOR"
+      ],
+      "capabilities": []
+    },
+    {
+      "id": "UAV-1",
+      "platform": "UAV",
+      "roles": [
+        "INITIATOR"
+      ],
+      "capabilities": []
+    },
+    {
+      "id": "AUV-1",
+      "platform": "AUV",
+      "roles": [
+        "EXECUTOR"
+      ],
+      "capabilities": [
+        "sonar"
+      ]
+    },
+    {
+      "id": "AUV-2",
+      "platform": "AUV",
+      "roles": [
+        "EXECUTOR"
+      ],
+      "capabilities": [
+        "sonar"
+      ]
+    },
+    {
+      "id": "COORD-1",
+      "platform": "UAV",
+      "roles": [
+        "COORDINATOR",
+        "EXECUTOR"
+      ],
+      "capabilities": [
+        "coordinate",
+        "survey"
+      ]
+    }
+  ],
+  "initial_registry": {
+    "USV-1": [],
+    "UAV-1": [],
+    "AUV-1": [
+      "sonar"
+    ],
+    "AUV-2": [
+      "sonar"
+    ],
+    "COORD-1": [
+      "coordinate",
+      "survey"
+    ]
+  },
+  "hard_constraints": {
+    "deadline": 900
+  },
+  "adjustment_policy": {
+    "max_retries": 3,
+    "allow_revision": false
+  },
+  "requirements": [
+    {
+      "task_id": "inspect",
+      "capability_description": "水下声呐检查",
+      "earliest_start": 0,
+      "deadline": 900,
+      "duration": 360,
+      "dependencies": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "task_id": "parallel",
+      "capability_description": "survey",
+      "earliest_start": 0,
+      "deadline": 900,
+      "duration": 400,
+      "dependencies": [],
+      "parameters": {},
+      "required": true
+    }
+  ],
+  "windows": [
+    {
+      "sender_id": "UAV-1",
+      "receiver_id": "USV-1",
+      "start": 0,
+      "end": 1000
+    },
+    {
+      "sender_id": "USV-1",
+      "receiver_id": "UAV-1",
+      "start": 0,
+      "end": 1000
+    },
+    {
+      "sender_id": "COORD-1",
+      "receiver_id": "AUV-1",
+      "start": 180,
+      "end": 200
+    },
+    {
+      "sender_id": "COORD-1",
+      "receiver_id": "AUV-2",
+      "start": 300,
+      "end": 320
+    },
+    {
+      "sender_id": "AUV-1",
+      "receiver_id": "COORD-1",
+      "start": 660,
+      "end": 700
+    },
+    {
+      "sender_id": "AUV-1",
+      "receiver_id": "COORD-1",
+      "start": 1080,
+      "end": 1120
+    },
+    {
+      "sender_id": "AUV-2",
+      "receiver_id": "COORD-1",
+      "start": 660,
+      "end": 700
+    },
+    {
+      "sender_id": "AUV-2",
+      "receiver_id": "COORD-1",
+      "start": 1080,
+      "end": 1120
+    },
+    {
+      "sender_id": "UAV-1",
+      "receiver_id": "COORD-1",
+      "start": 0,
+      "end": 1000
+    },
+    {
+      "sender_id": "COORD-1",
+      "receiver_id": "UAV-1",
+      "start": 0,
+      "end": 1000
+    },
+    {
+      "sender_id": "COORD-1",
+      "receiver_id": "USV-1",
+      "start": 0,
+      "end": 10
+    },
+    {
+      "sender_id": "USV-1",
+      "receiver_id": "COORD-1",
+      "start": 0,
+      "end": 10
+    },
+    {
+      "sender_id": "COORD-1",
+      "receiver_id": "USV-1",
+      "start": 250,
+      "end": 1000
+    },
+    {
+      "sender_id": "USV-1",
+      "receiver_id": "COORD-1",
+      "start": 250,
+      "end": 1000
+    }
+  ],
+  "events": [
+    {
+      "time": 120,
+      "type": "contact_change",
+      "sender": "COORD-1",
+      "receiver": "AUV-1",
+      "intervals": [
+        [
+          720,
+          740
+        ]
+      ]
+    },
+    {
+      "time": 120,
+      "type": "prediction_update",
+      "sender": "COORD-1",
+      "receiver": "AUV-1",
+      "intervals": [
+        [
+          720,
+          740
+        ]
+      ],
+      "observers": [
+        "COORD-1",
+        "USV-1"
+      ]
+    }
+  ]
+}
